@@ -4,10 +4,27 @@ class Player:
     def __init__(self, x, y, w, h):
         self.rect = pygame.Rect(x, y, w, h)
         self.color = (0, 128, 255)
-        self.velocity_y = 0
+
+        self.on_ground = False
+
+        # Acceleration and Velocity
+        self.ax = 0
+        self.ay = 0
+        self.vx = 0
+        self.vy = 0
+    
+    def jump(self):
+        if not self.on_ground:
+            return
+        self.vy = -10
+        self.ay = -0.04
+        self.on_ground = False
     
     def update(self):
-        pass
+        self.vx += self.ax
+        self.vy += self.ay
+        self.rect.x += self.vx
+        self.rect.y += self.vy
 
     def draw(self, screen):
         pygame.draw.rect(screen, self.color, self.rect)
@@ -30,5 +47,6 @@ class Enemy:
         self.rect.y += self.vy
 
     def draw(self, screen):
-        if self.in_screen(screen):
-            pygame.draw.rect(screen, self.color, self.rect)
+        if not self.in_screen(screen):
+            return
+        pygame.draw.rect(screen, self.color, self.rect)

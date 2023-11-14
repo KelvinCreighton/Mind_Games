@@ -11,7 +11,7 @@ screen = pygame.display.set_mode((WIDTH, HEIGHT))
 pygame.display.set_caption("Mind Games")
 
 # Game variables
-GRAVITY = 1
+GRAVITY = 0.04
 
 # Primary colours
 WHITE = (255, 255, 255)
@@ -27,7 +27,7 @@ enemy_count = 4
 enemies = []
 for i in range(enemy_count):
     enemy = sprites.Enemy(WIDTH + i*500, HEIGHT//2, 50, 50)
-    enemy.vx = -3
+    enemy.vx = -7
     enemies.append(enemy)
 
 clock = pygame.time.Clock()
@@ -42,7 +42,8 @@ while True:
         
         # Keydown events
         elif event.type == pygame.KEYDOWN:
-            pass
+             if event.key == pygame.K_SPACE:
+                player.jump()
         # Keyup events
         elif event.type == pygame.KEYUP:
             pass
@@ -50,13 +51,29 @@ while True:
     # Clear the screen
     screen.fill(BLACK)
 
+
     # PLAYER
+    if player.on_ground:
+        player.ay = 0
+        player.vy = 0
+    else:
+        player.ay += GRAVITY
+
+    player.update()
     player.draw(screen)
+    
+    if player.rect.y >= HEIGHT//2:
+        player.on_ground = True
+        player.rect.y = HEIGHT//2   # Temp solution for ground clipping
+    else:
+        player.on_ground = False
+
 
     # ENEMY
     for enemy in enemies:
         enemy.update()
         enemy.draw(screen)
+
 
     # Update game state
     pygame.display.flip()
