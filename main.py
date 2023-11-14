@@ -2,12 +2,16 @@ import sys
 import pygame
 import random
 import lib
+import sprites
 
 pygame.init()
 
 WIDTH, HEIGHT = 800, 600
 screen = pygame.display.set_mode((WIDTH, HEIGHT))
 pygame.display.set_caption("Mind Games")
+
+# Game variables
+GRAVITY = 1
 
 # Primary colours
 WHITE = (255, 255, 255)
@@ -16,21 +20,15 @@ PLAYER_C = (0, 128, 255)
 ENEMY_C = (255, 128, 0)
 
 # Player setup
-player_size = 50
-player_x = (WIDTH - player_size) // 2
-player_y = HEIGHT // 2
-player_rect = pygame.Rect(player_x, player_y, player_size, player_size)
+player = sprites.Player(WIDTH//2, HEIGHT//2, 50, 50)
 
 # Enemy setup
-enemy_size = 50
-enemy_speed = 3
 enemy_count = 4
 enemies = []
 for i in range(enemy_count):
-    enemy_x = WIDTH + i*500
-    enemy_y = HEIGHT // 2
-    enemy_rect = pygame.Rect(enemy_x, enemy_y, enemy_size, enemy_size)
-    enemies.append(enemy_rect)
+    enemy = sprites.Enemy(WIDTH + i*500, HEIGHT//2, 50, 50)
+    enemy.vx = -3
+    enemies.append(enemy)
 
 clock = pygame.time.Clock()
 
@@ -53,13 +51,12 @@ while True:
     screen.fill(BLACK)
 
     # PLAYER
-    pygame.draw.rect(screen, PLAYER_C, player_rect)
+    player.draw(screen)
 
     # ENEMY
     for enemy in enemies:
-        enemy.x -= enemy_speed
-        if lib.in_screen(screen, enemy):
-            pygame.draw.rect(screen, ENEMY_C, enemy)
+        enemy.update()
+        enemy.draw(screen)
 
     # Update game state
     pygame.display.flip()
