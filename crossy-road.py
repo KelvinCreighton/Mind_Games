@@ -13,7 +13,7 @@ pygame.init()
 from joblib import load
 
 # Load the model
-model = load('csp_lda_model.joblib')
+model = load('game/csp_lda_model.joblib')
 def EEGtoKeyStroke(eegDataInput):
     csp = model["csp"]
     lda = model["lda"]

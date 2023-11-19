@@ -5,9 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a98efbf3-9c7d-4d42-bbb5-f284b26578d1" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/crossy-road.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/game/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/game/arduino_data.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/game/game_music.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/game/game_over.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/game/hitting.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/game/main.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/game/music_test.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/game/sketch_nov16b/sketch_nov16b.ino" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/game/sprites.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crossy-road.py" beforeDir="false" afterPath="$PROJECT_DIR$/crossy-road.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/csp_lda_model.joblib" beforeDir="false" afterPath="$PROJECT_DIR$/game/csp_lda_model.joblib" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,11 +37,17 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
+    "git-widget-placeholder": "Merging game",
     "last_opened_file_path": "D:/Mind_Games-main/Mind_Games-main"
   }
 }]]></component>
-  <component name="RunManager" selected="Python.crossy-road">
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Mind_Games-main\Mind_Games-main\game" />
+      <recent name="D:\Mind_Games-main\Mind_Games-main\game\sketch_nov16b" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Python.main (1)">
     <configuration name="crossy-road" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Mind_Games-main" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -46,6 +61,27 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/crossy-road.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="main (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Mind_Games-main" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/game" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/game/main.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -75,6 +111,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.main (1)" />
         <item itemvalue="Python.crossy-road" />
       </list>
     </recent_temporary>
