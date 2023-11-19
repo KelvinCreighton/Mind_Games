@@ -4,20 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a98efbf3-9c7d-4d42-bbb5-f284b26578d1" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/game/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/game/arduino_data.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/game/game_music.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/game/game_over.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/game/hitting.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/game/main.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/game/music_test.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/game/sketch_nov16b/sketch_nov16b.ino" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/game/sprites.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crossy-road.py" beforeDir="false" afterPath="$PROJECT_DIR$/crossy-road.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/csp_lda_model.joblib" beforeDir="false" afterPath="$PROJECT_DIR$/game/csp_lda_model.joblib" afterDir="false" />
-    </list>
+    <list default="true" id="a98efbf3-9c7d-4d42-bbb5-f284b26578d1" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -37,7 +24,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "Merging game",
+    "git-widget-placeholder": "game",
     "last_opened_file_path": "D:/Mind_Games-main/Mind_Games-main"
   }
 }]]></component>
