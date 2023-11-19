@@ -2,6 +2,13 @@ import sys
 import pygame
 import random
 import sprites
+from joblib import load
+
+# Load the model
+model = load('csp_lda_model.joblib')
+
+# Use lda.predict() to make predictions
+
 
 # For dev
 USING_ARDUINO = False
@@ -105,3 +112,16 @@ while True:
     # Update game state
     pygame.display.flip()
     clock.tick(60)
+
+def EEGtoKeyStroke(eegDataInput):
+    csp = model["csp"]
+    lda = model["lda"]
+
+    transformed_data = csp.transform(eegDataInput)
+    prediction = lda.predict(transformed_data)
+    # Convert prediction to keystroke
+
+    if prediction == 0:  #left label
+        pygame.KEYLEFT
+    elif prediction == 1: #right label
+        pygame.KEYRIGHT
