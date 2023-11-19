@@ -23,9 +23,11 @@ def EEGtoKeyStroke(eegDataInput):
     # Convert prediction to keystroke
 
     if prediction == 0:  #left label
-        pygame.KEYLEFT
+        #go down action
+        return
     elif prediction == 1: #right label
-        pygame.KEYRIGHT
+        #go up action
+        return
 
 
 
